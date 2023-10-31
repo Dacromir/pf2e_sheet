@@ -7,11 +7,35 @@
             margin: 0.25in 0.25in 0.25in 0.25in;
             size: portrait;
     }
+
+    div.page {
+        display: grid;
+        grid-template-columns: repeat(80, 0.1in);
+        grid-template-rows: repeat(105, 0.1in);
+        page-break-after: always;
+    }
 </style>
 </head>
 
 <body>
+<!-- Main Page -->
+<div class="page">
+Character
+</div>
 
-  
+<!-- Feat Page -->
+<div class="page">
+Feats
+</div>
+
+<!-- Inventory Page -->
+<div class="page">
+Inventory
+</div>
+
+<!-- Spell Page -->
+<div class="page">
+Spells
+</div>
 </body>
 </html>
