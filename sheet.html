@@ -14,13 +14,21 @@
         grid-template-rows: repeat(105, 0.1in);
         page-break-after: always;
     }
+
+    .test-box {
+        background-color: lightgray;
+        text-align: center;
+    }
 </style>
 </head>
 
 <body>
 <!-- Main Page -->
 <div class="page">
-Character
+    <div class="test-box" style="grid-area: 1/1/10/-1;">Header</div>
+    <div class="test-box" style="grid-area: 12/1/-1/40;">Skills</div>
+    <div class="test-box" style="grid-area: 12/42/40/-1;">Defenses</div>
+    <div class="test-box" style="grid-area: 42/42/-1/-1;">Attacks</div>
 </div>
 
 <!-- Feat Page -->
