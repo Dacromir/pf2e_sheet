@@ -8,16 +8,43 @@
             size: portrait;
     }
 
+    * {
+        font-size: 10pt;
+    }
+
     div.page {
         display: grid;
-        grid-template-columns: repeat(80, 0.1in);
-        grid-template-rows: repeat(105, 0.1in);
+        grid-template-columns: repeat(79, 0.1in);
+        grid-template-rows: repeat(104, 0.1in);
         page-break-after: always;
     }
 
     .test-box {
-        background-color: lightgray;
+        border: 1px solid lightgray;
         text-align: center;
+    }
+    
+    
+    .box-l, .box-m, .box-s {
+        border: 1px solid #000000;
+        background-color: #ffffff;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .box-l {
+        width: 2in;
+        height: 20px;
+    }
+
+    .box-m {
+        width: 1in;
+        height: 20px;
+    }
+
+    .box-s {
+        width: 30px;
+        height: 20px;
     }
 </style>
 </head>
@@ -25,10 +52,28 @@
 <body>
 <!-- Main Page -->
 <div class="page">
-    <div class="test-box" style="grid-area: 1/1/10/-1;">Header</div>
+    <div style="grid-area: 1/1/10/-1;">
+        <table>
+            <thead>
+                <th style="width: 1.1in"></th>
+                <th style="width: 2in"></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Character Name</td>
+                    <td class="box-l"></td>
+                </tr>
+                <tr>
+                    <td>Player Name</td>
+                    <td class="box-l"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="test-box" style="grid-area: 12/1/-1/40;">Skills</div>
     <div class="test-box" style="grid-area: 12/42/40/-1;">Defenses</div>
     <div class="test-box" style="grid-area: 42/42/-1/-1;">Attacks</div>
+      
 </div>
 
 <!-- Feat Page -->
